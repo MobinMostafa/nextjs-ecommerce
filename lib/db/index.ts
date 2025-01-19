@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const cashed = (global as any).mongoose || { conn: null, promise: null };
 
 
-export const dbConnect = async (
+export const connectToDatabase = async (
     mongooseUrl = process.env.MONGODB_URI
 ) => {
    if (cashed.conn) return cashed.conn;
